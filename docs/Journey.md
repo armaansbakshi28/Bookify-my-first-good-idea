@@ -74,6 +74,31 @@ Created `.gitignore` to exclude virtual environments, API keys, local databases,
 - `.gitignore` created.
 - Initial commit still pending.
 
-### Next Step
+### 6. Reviewing and Staging Files
 
-Check `git status`, inspect the files to be tracked, and create the first commit.
+- `git add`: stages selected files for a future commit.
+- `git diff --cached --stat`: summarises staged changes.
+- `git status`: verifies which files are staged.
+
+**Why:** Reviewing staged files helps prevent accidental commits of private data or unwanted files.
+
+**Status:** Files staged and reviewed; initial commit pending.
+
+### 7. First Git Commit
+
+- `git commit -m "Initialise Bookify project"`: saves the staged files as the first snapshot in Git history.
+- `git log -1 --oneline`: displays the latest commit in a compact format.
+
+**Why:** Commits create checkpoints that let us track progress and understand how the project evolves.
+
+**Result:** Bookify's initial project setup and documentation are saved in Git.
+
+### 8. Verifying the First Commit
+
+- Commit created successfully: `ee39f2d`.
+- `git status` revealed that the journal had changed after the commit.
+- `git log -1 --oneline` confirmed the latest commit.
+
+**What I learned:** Git commits preserve snapshots of staged files. Editing a file after a commit creates a new change that must be staged and committed separately.
+
+**Result:** The initial project setup is saved, and the journal records the next step in the workflow.
