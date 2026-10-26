@@ -179,3 +179,26 @@ Created `.gitignore` to exclude virtual environments, API keys, local databases,
 **What I learned:** Git saves local snapshots through commits. GitHub can host a remote copy of the repository, but the connection must be configured separately.
 
 **Next session:** Verify the environment, run the backend, and complete the GitHub setup.
+
+### 15. First Backend Startup and Debugging
+
+- Started Uvicorn from the project root.
+- Encountered an error because the expected `app` attribute was not found in `backend.Main`.
+- Checked that `Main.py` defines `app = FastAPI(...)` and saved the file.
+
+**What I learned:** Uvicorn uses the format `module:variable` to locate an application. In `backend.Main:app`, `backend.Main` identifies the Python module and `app` identifies the FastAPI instance.
+
+**Result:** Pending successful restart and endpoint verification.
+
+### 16. First Backend Endpoint Successfully Tested
+
+- Started the FastAPI application using Uvicorn.
+- Fixed the missing `app` attribute issue in `backend.Main`.
+- Tested `/` and confirmed the Bookify welcome response.
+- Tested `/health` and confirmed the `ok` status.
+
+**What I learned:** An API endpoint receives a request and returns a response. The health endpoint lets us check whether the backend is responding.
+
+**Result:** Bookify's first backend endpoints are working locally.
+
+**Next milestone:** Build the PDF upload and text extraction pipeline.
