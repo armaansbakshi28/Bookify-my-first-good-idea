@@ -102,3 +102,80 @@ Created `.gitignore` to exclude virtual environments, API keys, local databases,
 **What I learned:** Git commits preserve snapshots of staged files. Editing a file after a commit creates a new change that must be staged and committed separately.
 
 **Result:** The initial project setup is saved, and the journal records the next step in the workflow.
+
+### 9. Building the First Backend
+
+- Created a Python virtual environment using `python -m venv .venv`.
+- Installed FastAPI and its standard dependencies.
+- Created `backend/Main.py` with a root endpoint and a health-check endpoint.
+- Started the development server using Uvicorn.
+
+**Concepts learned:**
+- A backend processes requests and returns responses.
+- An API defines how different parts of an application communicate.
+- An endpoint is a URL that performs a specific function.
+- A virtual environment isolates project dependencies.
+
+**Verification:** Tested the root endpoint, health endpoint and interactive API documentation.
+
+**Next step:** Add local PDF upload and text extraction.
+
+### 10. Python Interpreter and Virtual Environments
+
+- PyCharm reported that no Python interpreter was enabled.
+- Created a virtual environment through PyCharm.
+- Found two `.venv` folders in the project.
+- Decided to use the root-level `.venv` as the project's main Python environment.
+
+**What I learned:** A Python interpreter executes Python code. A virtual environment provides an isolated interpreter and project-specific packages.
+
+**Next step:** Configure the project interpreter and verify the environment before installing backend dependencies.
+
+### 11. Configuring the Python Interpreter
+
+- Selected a project virtual environment in PyCharm.
+- Verified Python 3.12.3 using `python.exe --version`.
+- Confirmed that the virtual environment activates in the terminal.
+
+**What I learned:** The terminal's `(.venv)` prefix indicates an activated virtual environment. Packages installed through that environment's Python belong to that environment.
+
+**Next step:** Verify FastAPI installation and run Bookify's first backend endpoint.
+
+### 12. Understanding Project Paths and Environments
+
+- The terminal was inside the `backend` directory.
+- FastAPI was installed in `backend/.venv`.
+- The project also has a root-level `.venv`.
+
+**What I learned:** The current working directory determines where relative paths point. A virtual environment determines which Python interpreter and installed packages are used.
+
+**Decision:** Standardise on the root `.venv` to avoid managing two environments.
+
+### 13. Standardising the Python Environment
+
+- Deactivated the backend virtual environment.
+- Returned to the project root using `cd ..`.
+- Verified that the root `.venv` runs Python 3.12.3.
+- Chose the root `.venv` as Bookify's single development environment.
+
+**What I learned:** Python packages are installed separately in each virtual environment. The working directory also affects how Python imports project modules.
+
+**Next step:** Run and verify the FastAPI backend from the project root.
+
+### 14. End-of-Day Checkpoint
+
+**Completed**
+- Set up the local Git repository.
+- Created the initial commit and documented basic Git commands.
+- Verified Python 3.12.3 in the root virtual environment.
+- Created the initial backend file and began configuring FastAPI.
+
+**Still pending**
+- Standardise on the root `.venv`.
+- Verify FastAPI in the root environment.
+- Run and test the first backend endpoint.
+- Connect the local Git repository to GitHub.
+
+**What I learned:** Git saves local snapshots through commits. GitHub can host a remote copy of the repository, but the connection must be configured separately.
+
+**Next session:** Verify the environment, run the backend, and complete the GitHub setup.
