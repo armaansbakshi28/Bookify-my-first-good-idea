@@ -1,0 +1,30 @@
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Local data
+Data/PDFs/
+Data/Extracted/
+Data/Database/
+*.db
+*.sqlite
+*.sqlite3
+
+# Frontend
+node_modules/
+dist/
+
+# IDE
+.idea/
+
+# Operating system
+.DS_Store
+Thumbs.db
